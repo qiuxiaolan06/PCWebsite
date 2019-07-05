@@ -97,16 +97,52 @@
                     </el-col>
                 </el-row>
             </div>
-
+            <!--新闻部分-->
             <div class="page_news">
-                <!--<div class="textBox">-->
-                    <!--<transition name="slide">-->
-                        <!--<p class="text" :key="text.id">-->
-                            <!--<img src="../assets/img/imgs/b1.png" alt="">-->
-                            <!--{{text.val}}-->
-                        <!--</p>-->
-                    <!--</transition>-->
-                <!--</div>-->
+                <div class="news_img">
+                    <p>生意难做?</p>
+                    <p>没关系</p>
+                    <div class="img_inner">
+                        <div>XX专为实体商户而生</div>
+                        <div class="img">
+                            <img src="../assets/img/header/logo.png" alt="">
+                        </div>
+                        <div>我们的使命是让实体商户生意不再难做</div>
+                    </div>
+                </div>
+
+                <div class="page_toutiao">
+                    <div class="toutiao_title">
+                        XX头条/NEWS
+                    </div>
+                    <div class="toutiao_swipe">
+                        <el-carousel height="200px" direction="vertical" :autoplay="true" arrow="always">
+                            <el-carousel-item v-for="item in 3" :key="item">
+                               <div class="toutiao_info">
+                                   <div class="info_img">
+                                       <img src="../assets/img/imgs/b1.png" alt="">
+                                   </div>
+                                   <div class="info_font">
+                                       <p class="info_time">/2017/05/18</p>
+                                       <p class="info_title">谷创百货超市在梅州成立</p>
+                                       <p class="info_show">5月9日上午，我们在梅州成立了第一家谷创百货超市，谷创正式迈出了零售企业的步伐;谷创百货超市在梅州只是一个起点，在日后还会有更多的谷创百货超市。</p>
+                                   </div>
+                               </div>
+                            </el-carousel-item>
+                        </el-carousel>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--底部广告-->
+        <div class="page_banner" :style="{backgroundImage:'url('+require('../assets/img/imgs/shanghai.png')+')'}">
+            <div class="container">
+                <h1>谷创电子商务——专注实体商户的自救</h1>
+                <h3>
+                    创业一年，入驻商户就已经超过1500多家，商城会员数量正在逐日剧增；
+                    <br>
+                    我们的使命是让实体商户生意不再难做，谷创致力于打通新型网购销售模式。
+                </h3>
             </div>
         </div>
     </div>
@@ -120,24 +156,15 @@
         data() {
             return {
                 carouselHeight: '500px',//轮播图高度
-                textArr: [
-                    '1 第一条公告',
-                    '2 第二条公告第二条公告',
-                    '3 第三条公告第三条公告第三条公告'
-                ],
-                number: 0
             }
         },
         computed: {
             text () {
                 return {
-                    id: this.number,
-                    val: this.textArr[this.number]
                 }
             }
         },
         mounted() {
-            this.startMove();
             //根据窗口宽度设置轮播图高度
             this.resizeCarouselHeight();
             window.onresize = (() => {
@@ -165,45 +192,26 @@
                     this.carouselHeight = '900px'
                 }
             },
-            startMove () {
-                // eslint-disable-next-line
-                let timer = setTimeout(() => {
-                    if (this.number === 2) {
-                        this.number = 0;
-                    } else {
-                        this.number += 1;
-                    }
-                    this.startMove();
-                }, 2000); // 滚动不需要停顿则将2000改成动画持续时间
-            }
         }
     }
 </script>
 
 <style lang="scss" scoped>
     @import "../assets/css/page";
-    .textBox {
-        width: 100%;
-        height: 40px;
-        margin: 0 auto;
-        overflow: hidden;
-        position: relative;
-        text-align: center;
+
+    .el-carousel__item h3 {
+        color: #475669;
+        font-size: 14px;
+        opacity: 0.75;
+        line-height: 200px;
+        margin: 0;
     }
-    .text {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
+
+    .el-carousel__item:nth-child(2n) {
+        background-color: #d3dce6;
     }
-    .slide-enter-active, .slide-leave-active {
-        transition: all 0.5s linear;
-    }
-    .slide-enter{
-        transform: translateY(20px) scale(1);
-        opacity: 1;
-    }
-    .slide-leave-to {
-        transform: translateY(-20px) scale(0.8);
-        opacity: 0;
+
+    .el-carousel__item:nth-child(2n+1) {
+        background-color: #d3dce6;
     }
 </style>
