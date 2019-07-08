@@ -4,7 +4,7 @@
            <div class="container">
                <div class="nav">
                    <div class="nav_logo">
-                       <!--<img src="../assets/img/header/logo2.png" alt="">-->
+                       <img src="../assets/img/header/logo2.png" alt="">
                    </div>
                    <div class="nav_link">
                        <span>
@@ -12,7 +12,7 @@
                            <i></i>
                        </span>
                        <span>
-                           <router-link to="/">**通宝</router-link>
+                           <router-link to="/">玩转通宝</router-link>
                            <i></i>
                        </span>
                        <span>

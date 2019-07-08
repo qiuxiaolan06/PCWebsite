@@ -113,7 +113,7 @@
 
                 <div class="page_toutiao">
                     <div class="toutiao_title">
-                        XX头条/NEWS
+                        谷创头条/NEWS
                     </div>
                     <div class="toutiao_swipe">
                         <el-carousel height="200px" direction="vertical" :autoplay="true" arrow="always">
@@ -145,14 +145,41 @@
                 </h3>
             </div>
         </div>
-    </div>
+
+        <!--联系我们-->
+        <div class="container">
+            <div class="contact_inner">
+                <div class="contact_about">
+                    <p>江苏省谷创电子商务南通有限公司</p>
+                    <p>地址：江苏省南通市崇川区尚东国际商务中心5号楼601室</p>
+                    <p>全国业务咨询热线：<span>400-668-1058</span></p>
+                    <p>全国售后服务热线：<span>0513-66679579</span></p>
+                </div>
+                <div class="contact">
+                    <div class="toutiao_title">
+                        联系我们/NEWS
+                    </div>
+                    <div class="wire">
+                        <img src="../assets/img/imgs/tianxian4.png" alt="">
+                    </div>
+                    <div class="map_box">
+                        <div id="all-map" class="all-map" style="width:590px;height: 330px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <page-footer></page-footer>
+  </div>
 </template>
 
 <script>
     import PageHeader from '../components/Header'
+    import PageFooter from '../components/Footer'
+    // import BMap from 'BMap'
+
     export default {
         name: "Home",
-        components: {PageHeader},
+        components: {PageHeader,PageFooter},
         data() {
             return {
                 carouselHeight: '500px',//轮播图高度
@@ -165,6 +192,7 @@
             }
         },
         mounted() {
+            this.BaiduMap();
             //根据窗口宽度设置轮播图高度
             this.resizeCarouselHeight();
             window.onresize = (() => {
@@ -172,6 +200,7 @@
             });
         },
         methods: {
+            //轮播图高度
             resizeCarouselHeight() {
                 let innerWidth = window.innerWidth;
                 if (innerWidth <= 768) {
@@ -192,6 +221,24 @@
                     this.carouselHeight = '900px'
                 }
             },
+
+            //百度地图
+            BaiduMap() {
+                /**地图初始化 start */
+                var map = new BMap.Map("all-map")// 创建Map实例
+                map.centerAndZoom(new BMap.Point(120.913772,32.030526), 11)// 初始化地图,设置中心点坐标和地图级别
+                // 添加地图类型控件
+                map.addControl(new BMap.MapTypeControl({
+                    mapTypes: [
+                        BMAP_NORMAL_MAP,
+                        BMAP_HYBRID_MAP
+                    ]
+                }));
+                let marker = new BMap.Marker(120.913772,32.030526);        // 创建标注
+                this.map.addOverlay(marker);
+                map.setCurrentCity("南通")// 设置地图显示的城市 此项是必须设置的
+                map.enableScrollWheelZoom(true)//开启鼠标滚轮缩放
+            }
         }
     }
 </script>

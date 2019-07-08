@@ -309,6 +309,142 @@
       text-align: center;
       color: #fff;
       font-weight: normal;
+      line-height: 30px;
+      font-size:16px;
+    }
+  }
+}
+
+//联系我们
+.contact_inner{
+  display: flex;
+  .contact_about{
+    flex: 1;
+    height:300px;
+    line-height: 300px;
+    padding: 170px 0;
+    overflow: hidden;
+    p{
+      line-height: 40px;
+    }
+    p:nth-child(1){
+      font-size: 26px;
+      font-weight: bold;
+    }
+    p:nth-child(2){
+      font-size: 16px;
+    }
+
+    p:nth-child(3) span{
+      color: #ff9500;
+      font-size: 26px;;
+    }
+
+    p:nth-child(4) span{
+      color: #ff9500;
+      font-size: 26px;
+    }
+  }
+  .contact{
+    margin-bottom: 50px;
+    flex: 1;
+
+    .toutiao_title {
+      font-size: 36px;
+      color: #b9965e;
+      text-align: right;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #b9965e;
+    }
+
+    .wire{
+      text-align: right;
+      overflow: hidden;
+      padding-right: 60px;
+    }
+
+    .map_box{
+      margin-top: -5px;
+      width: 590px;
+      height: 330px;
+      border: 10px solid #EAEAEA;
+      background: #EAEAEA;
+      filter: alpha(opacity=100);
+      -moz-opacity: 1;
+      -khtml-opacity: 1;
+      opacity: 1;
+      -moz-border-radius: 80px;
+      -webkit-border-radius: 80px;
+      border-radius: 80px;
+      overflow: hidden;
+    }
+
+  }
+
+}
+
+//底部样式
+.page_footer{
+  width: 100%;
+  background: #000;
+
+  .footer_container{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 50px 0;
+
+    .footer_top{
+      color: #696969;
+      text-align: right;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #696969;
+
+      .button{
+        color: #fff;
+        background-color: #484848;
+        border-color: #484848;
+        display: inline-block;
+        padding: 2px 28px;
+        margin-bottom: 0;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.82857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 1000px;
+        margin-left: 10px;
+      }
+    }
+
+    .footer_info{
+      h3{
+        text-align: center;
+        width: 1000px;
+        color: white;
+        font-size: 24px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      h5{
+        text-align: center;
+        width: 1000px;
+        color: #696969;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: normal;
+        a{
+          color:#696969;
+        }
+        a:hover{
+          text-decoration: underline;
+          color:#b9965e;
+        }
+      }
     }
   }
 }
