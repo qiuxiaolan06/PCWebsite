@@ -1,0 +1,62 @@
+//轮播图部分
+.swipe {
+  .swipe_img {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.container{
+  width: 1200px;
+  margin: 0 auto;
+
+  .thImg{
+    width: 860px;
+    margin:0 auto;
+    position: relative;
+
+    .clearfix{
+      width: 860px;
+      margin-top: -15px;
+      position: absolute;
+      z-index: 100;
+      padding: 15px;
+      background: #fff;
+      background-repeat: repeat-x;
+      background-position:bottom;
+
+      .imgs{
+        display: inline-block;
+        width: 33.3%;
+        text-align: center;
+        flex: 1;
+
+        a{
+          text-align: center;
+          display: inline-block;
+          width: 260px;
+          height: 350px;
+          margin-right: 15px;
+          overflow: hidden;
+
+          img{
+            transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+          }
+        }
+
+        a:last-child{
+          margin-right: 0;
+        }
+      }
+
+      .imgs a:hover img{
+        transform: scale(1.05,1.05);
+        -webkit-transform:scale(1.05,1.05) ;
+      }
+    }
+  }
+}

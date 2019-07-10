@@ -4,7 +4,7 @@
            <div class="container">
                <div class="nav">
                    <div class="nav_logo">
-                       <img src="../assets/img/header/logo2.png" alt="">
+                       <img src="../../assets/img/header/logo2.png" alt="">
                    </div>
                    <div class="nav_link">
                        <span>
@@ -30,7 +30,9 @@
                    </div>
 
                    <div class="enter_button">
-                       <el-button type="warning" round>进入商城</el-button>
+                       <el-button type="warning" round>
+                          <router-link to="/shppingMall/Home" style="color: #fff"> 进入商城</router-link>
+                       </el-button>
                    </div>
                </div>
            </div>
@@ -50,6 +52,6 @@
 </script>
 
 <style lang="scss" scoped>
-    @import "../assets/css/base";
-    @import "../assets/css/page";
+    @import "../../assets/css/base";
+    @import "../../assets/css/page";
 </style>

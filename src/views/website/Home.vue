@@ -7,22 +7,22 @@
             <el-carousel :height="carouselHeight" arrow="always">
                 <el-carousel-item>
                     <div class="swipe_img"
-                         :style="{backgroundImage:'url('+require('../assets/img/index/h7.jpg')+')'}">
+                         :style="{backgroundImage:'url('+require('../../assets/img/index/h7.jpg')+')'}">
                     </div>
                 </el-carousel-item>
                 <el-carousel-item>
                     <div class="swipe_img"
-                         :style="{backgroundImage:'url('+require('../assets/img/index/h5.jpg')+')'}">
+                         :style="{backgroundImage:'url('+require('../../assets/img/index/h5.jpg')+')'}">
                     </div>
                 </el-carousel-item>
                 <el-carousel-item>
                     <div class="swipe_img"
-                         :style="{backgroundImage:'url('+require('../assets/img/index/h2.3.jpg')+')'}">
+                         :style="{backgroundImage:'url('+require('../../assets/img/index/h2.3.jpg')+')'}">
                     </div>
                 </el-carousel-item>
                 <el-carousel-item>
                     <div class="swipe_img"
-                         :style="{backgroundImage:'url('+require('../assets/img/index/h1.jpg')+')'}">
+                         :style="{backgroundImage:'url('+require('../../assets/img/index/h1.jpg')+')'}">
                     </div>
                 </el-carousel-item>
             </el-carousel>
@@ -38,7 +38,7 @@
                 <el-row :gutter="20">
                     <el-col :span="6">
                         <div class="grid-content bg-purple">
-                            <div class="page_circle" :style="{backgroundImage:'url('+require('../assets/img/imgs/service_tuoyuan1-1.png')+')'}">
+                            <div class="page_circle" :style="{backgroundImage:'url('+require('../../assets/img/imgs/service_tuoyuan1-1.png')+')'}">
                                 8
                             </div>
                             <p>8大审核标准</p>
@@ -46,7 +46,7 @@
                     </el-col>
                     <el-col :span="6">
                         <div class="grid-content bg-purple">
-                            <div class="page_circle" :style="{backgroundImage:'url('+require('../assets/img/imgs/service_tuoyuan1-1.png')+')'}">
+                            <div class="page_circle" :style="{backgroundImage:'url('+require('../../assets/img/imgs/service_tuoyuan1-1.png')+')'}">
                                 365
                             </div>
                             <p>365天管家式服务</p>
@@ -54,7 +54,7 @@
                     </el-col>
                     <el-col :span="6">
                         <div class="grid-content bg-purple">
-                            <div class="page_circle" :style="{backgroundImage:'url('+require('../assets/img/imgs/service_tuoyuan1-1.png')+')'}">
+                            <div class="page_circle" :style="{backgroundImage:'url('+require('../../assets/img/imgs/service_tuoyuan1-1.png')+')'}">
                                 1500
                             </div>
                             <p>1500+实体店的选择</p>
@@ -62,7 +62,7 @@
                     </el-col>
                     <el-col :span="6">
                         <div class="grid-content bg-purple">
-                            <div class="page_circle" :style="{backgroundImage:'url('+require('../assets/img/imgs/service_tuoyuan1-1.png')+')'}">
+                            <div class="page_circle" :style="{backgroundImage:'url('+require('../../assets/img/imgs/service_tuoyuan1-1.png')+')'}">
                                 3
                             </div>
                             <p>3大平台支持</p>
@@ -75,7 +75,7 @@
             <div class="page_scope">
                 <el-row type="flex" class="row-bg" justify="space-around">
                     <el-col :span="6">
-                        <div class="grid-content" :style="{backgroundImage:'url('+require('../assets/img/imgs/z1.jpg')+')'}">
+                        <div class="grid-content" :style="{backgroundImage:'url('+require('../../assets/img/imgs/z1.jpg')+')'}">
                             <h2>PC端商城</h2>
                             <h5>
                                 PC端商城打造一个链接商家，消费者， 最快捷的网购平台
@@ -84,13 +84,13 @@
                         </div>
                     </el-col>
                     <el-col :span="6">
-                        <div class="grid-content" :style="{backgroundImage:'url('+require('../assets/img/imgs/z2.jpg')+')'}">
+                        <div class="grid-content" :style="{backgroundImage:'url('+require('../../assets/img/imgs/z2.jpg')+')'}">
                             <h2>移动端APP</h2>
                             <h5> 让商家随时随地卖商品让消费者随时随地购买商品</h5>
                         </div>
                     </el-col>
                     <el-col :span="6">
-                        <div class="grid-content" :style="{backgroundImage:'url('+require('../assets/img/imgs/z3.jpg')+')'}">
+                        <div class="grid-content" :style="{backgroundImage:'url('+require('../../assets/img/imgs/z3.jpg')+')'}">
                             <h2>微信端商城</h2>
                             <h5>扩大会员数量，让每个地方都有谷创会员</h5>
                         </div>
@@ -105,7 +105,7 @@
                     <div class="img_inner">
                         <div>XX专为实体商户而生</div>
                         <div class="img">
-                            <img src="../assets/img/header/logo.png" alt="">
+                            <img src="../../assets/img/header/logo.png" alt="">
                         </div>
                         <div>我们的使命是让实体商户生意不再难做</div>
                     </div>
@@ -120,7 +120,7 @@
                             <el-carousel-item v-for="item in 3" :key="item">
                                <div class="toutiao_info">
                                    <div class="info_img">
-                                       <img src="../assets/img/imgs/b1.png" alt="">
+                                       <img src="../../assets/img/imgs/b1.png" alt="">
                                    </div>
                                    <div class="info_font">
                                        <p class="info_time">/2017/05/18</p>
@@ -135,7 +135,7 @@
             </div>
         </div>
         <!--底部广告-->
-        <div class="page_banner" :style="{backgroundImage:'url('+require('../assets/img/imgs/shanghai.png')+')'}">
+        <div class="page_banner" :style="{backgroundImage:'url('+require('../../assets/img/imgs/shanghai.png')+')'}">
             <div class="container">
                 <h1>谷创电子商务——专注实体商户的自救</h1>
                 <h3>
@@ -160,7 +160,7 @@
                         联系我们/NEWS
                     </div>
                     <div class="wire">
-                        <img src="../assets/img/imgs/tianxian4.png" alt="">
+                        <img src="../../assets/img/imgs/tianxian4.png" alt="">
                     </div>
                     <div class="map_box">
                         <div id="all-map" class="all-map" style="width:590px;height: 330px"></div>
@@ -173,8 +173,8 @@
 </template>
 
 <script>
-    import PageHeader from '../components/Header'
-    import PageFooter from '../components/Footer'
+    import PageHeader from '../../components/website/Header'
+    import PageFooter from '../../components/website/Footer'
     // import BMap from 'BMap'
 
     export default {
@@ -244,7 +244,7 @@
 </script>
 
 <style lang="scss" scoped>
-    @import "../assets/css/page";
+    @import "../../assets/css/page";
 
     .el-carousel__item h3 {
         color: #475669;

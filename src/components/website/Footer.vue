@@ -14,7 +14,7 @@
                         <a class="copy" href="http://www.nthxmai.com/" target="_blank">商城网址：http://www.nthxmai.com/</a>
                     </h5>
                     <h5>
-                        <a class="copy" href="http://www.miibeian.gov.cn/" target="_blank">Copyright @ 2016-2017 江苏省谷创电子商务南通有限公司 版权所有 苏ICP备16049040号<img src="../assets/img/footer/ico.png" alt=""></a>
+                        <a class="copy" href="http://www.miibeian.gov.cn/" target="_blank">Copyright @ 2016-2017 江苏省谷创电子商务南通有限公司 版权所有 苏ICP备16049040号<img src="../../assets/img/footer/ico.png" alt=""></a>
 
                     </h5>
                 </div>
@@ -31,6 +31,6 @@
 </script>
 
 <style lang="scss" scoped>
-    @import "../assets/css/page";
+    @import "../../assets/css/page";
 
 </style>
