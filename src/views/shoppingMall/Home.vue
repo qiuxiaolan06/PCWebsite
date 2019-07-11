@@ -22,6 +22,7 @@
         </div>
 
         <div class="container">
+            <!--三张小图-->
             <div class="thImg">
                 <div class="clearfix" :style="{backgroundImage:'url('+require('../../assets/img/shoppingMall/home/bg.jpg')+')'}">
                     <div class="imgs">
@@ -42,9 +43,81 @@
 
                 </div>
             </div>
+            <div style="clear: both"></div>
+
+            <!--分割线-->
+            <div class="image">
+                <img src="../../assets/img/shoppingMall/home/ih1.jpg" alt="">
+            </div>
+
+            <!--区域内容-->
+            <div class="clearfix">
+                <div>
+                    <router-link to>
+                        <img src="../../assets/img/shoppingMall/home/n1.jpg" alt="">
+                    </router-link>
+                    <p></p>
+                </div>
+                <div>
+                    <router-link to>
+                        <img src="../../assets/img/shoppingMall/home/n2.jpg" alt="">
+                    </router-link>
+                    <p></p>
+                </div>
+                <div>
+                    <router-link to>
+                        <img src="../../assets/img/shoppingMall/home/n3.jpg" alt="">
+                    </router-link>
+                    <p></p>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div>
+                    <router-link to>
+                        <img src="../../assets/img/shoppingMall/home/n4.jpg" alt="">
+                    </router-link>
+                    <p></p>
+                </div>
+                <div>
+                    <router-link to>
+                        <img src="../../assets/img/shoppingMall/home/n5.jpg" alt="">
+                    </router-link>
+                    <p></p>
+                </div>
+                <div>
+                    <router-link to>
+                        <img src="../../assets/img/shoppingMall/home/n6.jpg" alt="">
+                    </router-link>
+                    <p></p>
+                </div>
+            </div>
+
+            <!--分割线-->
+            <div class="image">
+                <img src="../../assets/img/shoppingMall/home/ih2.jpg" alt="">
+            </div>
+
+            <!--摆件 花艺-->
+            <div class="flower">
+                <el-row>
+                    <el-col :span="8" v-for="item in flowerList" :key="item.id">
+                        <div class="grid-content">
+                            <dl>
+                                <dt>
+                                    <img src="../../assets/img/shoppingMall/home/flo4.jpg" alt="">
+                                </dt>
+                                <dd class="name">
+                                    {{item.flowerName}}
+                                </dd>
+                                <dd class="price">
+                                    &yen;{{item.flowerPrice}}
+                                </dd>
+                            </dl>
+                        </div>
+                    </el-col>
+                </el-row>
+            </div>
         </div>
-
-
     </div>
 </template>
 
@@ -55,6 +128,38 @@
         data() {
             return {
                 carouselHeight: '500px',//轮播图高度
+                flowerList:[
+                    {
+                        flowerId:'001',
+                        flowerName:'【花艺】七头美丽玫瑰仿真花束',
+                        flowerPrice:'89.00'
+                    },
+                    {
+                        flowerId:'002',
+                        flowerName:'【花艺】七头美丽玫瑰仿真花束',
+                        flowerPrice:'150.00'
+                    },
+                    {
+                        flowerId:'003',
+                        flowerName:'【花艺】七头美丽玫瑰仿真花束',
+                        flowerPrice:'88.00'
+                    },
+                    {
+                        flowerId:'004',
+                        flowerName:'【花艺】七头美丽玫瑰仿真花束',
+                        flowerPrice:'96.00'
+                    },
+                    {
+                        flowerId:'005',
+                        flowerName:'【花艺】七头美丽玫瑰仿真花束',
+                        flowerPrice:'72.00'
+                    },
+                    {
+                        flowerId:'006',
+                        flowerName:'【花艺】七头美丽玫瑰仿真花束',
+                        flowerPrice:'108.00'
+                    },
+                ]
             }
         },
         computed: {

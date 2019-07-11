@@ -15,6 +15,7 @@
 
   .thImg{
     width: 860px;
+    height: 410px;
     margin:0 auto;
     position: relative;
 
@@ -56,6 +57,97 @@
       .imgs a:hover img{
         transform: scale(1.05,1.05);
         -webkit-transform:scale(1.05,1.05) ;
+      }
+    }
+  }
+
+  .image{
+    width: 100%;
+    text-align: center;
+  }
+
+  .clearfix{
+    width: 100%;
+    display: flex;
+    margin: 20px 0;
+
+    div{
+      flex: 1;
+      //text-align: center;
+      margin-right: 50px;
+      position: relative;
+      cursor: pointer;
+
+      p{
+        padding:0;
+        margin: 0;
+        display: inline-block;
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        opacity: 0;
+        transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+      }
+
+    }
+
+    div:hover p{
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+  }
+
+  .flower{
+    .grid-content{
+      dl{
+        margin: 0;
+        padding: 0;
+        dt{
+          text-align: center;
+          padding: 0;
+          width: 90%;
+          margin: 0 auto;
+        }
+        dd{
+          padding: 0;
+          text-align: center;
+          width: 90%;
+          margin: 15px auto;
+        }
+        .name{
+          font-size: 13px;
+          font-weight: bold;
+        }
+
+        .price{
+          width: 100px;
+          border-radius: 5px;
+          padding: 10px;
+          color: #a10000;
+          border: 1px solid #bababa;
+          font-size: 16px;
+          font-weight: bold;
+          background: #fff;
+          transition: all .8s ease;
+          -webkit-transition: all .8s ease;
+          cursor: pointer;
+        }
+
+        .price:hover{
+          background: #a10000;
+          color: #fff;
+          font-size: 16px;
+          border: 1px solid #a10000;
+          cursor: pointer;
+        }
       }
     }
   }
