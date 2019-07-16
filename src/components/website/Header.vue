@@ -31,7 +31,7 @@
 
                    <div class="enter_button">
                        <el-button type="warning" round>
-                          <router-link to="/shppingMall/Home" style="color: #fff"> 进入商城</router-link>
+                          <router-link to="/shoppingMall/Home" style="color: #fff">进入商城</router-link>
                        </el-button>
                    </div>
                </div>

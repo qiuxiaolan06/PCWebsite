@@ -26,7 +26,7 @@
             <div class="thImg">
                 <div class="clearfix" :style="{backgroundImage:'url('+require('../../assets/img/shoppingMall/home/bg.jpg')+')'}">
                     <div class="imgs">
-                        <router-link to>
+                        <router-link to="/shoppingMall/detail/vase">
                             <img src="../../assets/img/shoppingMall/home/i1.jpg" alt="">
                         </router-link>
                     </div>
@@ -101,10 +101,12 @@
             <div class="flower">
                 <el-row>
                     <el-col :span="8" v-for="item in flowerList" :key="item.id">
-                        <div class="grid-content">
+                        <div class="grid-content tran">
                             <dl>
                                 <dt>
+                                    <span class="abl"></span>
                                     <img src="../../assets/img/shoppingMall/home/flo4.jpg" alt="">
+                                    <span class="abr"></span>
                                 </dt>
                                 <dd class="name">
                                     {{item.flowerName}}
@@ -118,13 +120,48 @@
                 </el-row>
             </div>
         </div>
+        <!--大图广告-->
+        <div class="big_banner">
+            <img src="../../assets/img/shoppingMall/home/ib1.jpg" alt="">
+        </div>
+
+        <!--底部区域-->
+        <div class="container">
+            <!--分割线-->
+            <div class="image">
+                <img src="../../assets/img/shoppingMall/home/ih3.jpg" alt="">
+            </div>
+
+            <!--商品-->
+            <div class="pro">
+                <el-row>
+                    <el-col :span="6" v-for="item in proList" :key="item.id">
+                        <div class="grid-content">
+                            <dl>
+                                <dt>
+                                    <img src="../../assets/img/shoppingMall/home/s3.jpg" alt="">
+                                </dt>
+                                <dd class="name">
+                                    {{item.proName}}
+                                </dd>
+                                <dd class="price">
+                                    &yen;{{item.proPrice}}
+                                </dd>
+                            </dl>
+                        </div>
+                    </el-col>
+                </el-row>
+            </div>
+        </div>
+        <Footer></Footer>
     </div>
 </template>
 
 <script>
+    import Footer from '../../components/shoppingMall/Footer'
     export default {
         name: "Home",
-        components: {},
+        components: {Footer},
         data() {
             return {
                 carouselHeight: '500px',//轮播图高度
@@ -158,6 +195,48 @@
                         flowerId:'006',
                         flowerName:'【花艺】七头美丽玫瑰仿真花束',
                         flowerPrice:'108.00'
+                    },
+                ],
+                proList:[
+                    {
+                        proId:'001',
+                        proName:'【GC】七头美丽玫瑰仿真花束',
+                        proPrice:'89.00'
+                    },
+                    {
+                        proId:'002',
+                        proName:'【GC】七头美丽玫瑰仿真花束',
+                        proPrice:'150.00'
+                    },
+                    {
+                        proId:'003',
+                        proName:'【GC】七头美丽玫瑰仿真花束',
+                        proPrice:'88.00'
+                    },
+                    {
+                        proId:'004',
+                        proName:'【GC】七头美丽玫瑰仿真花束',
+                        proPrice:'96.00'
+                    },
+                    {
+                        proId:'005',
+                        proName:'【GC】七头美丽玫瑰仿真花束',
+                        proPrice:'72.00'
+                    },
+                    {
+                        proId:'006',
+                        proName:'【GC】七头美丽玫瑰仿真花束',
+                        proPrice:'108.00'
+                    },
+                    {
+                        proId:'007',
+                        proName:'【GC】七头美丽玫瑰仿真花束',
+                        proPrice:'108.00'
+                    },
+                    {
+                        proId:'008',
+                        proName:'【GC】七头美丽玫瑰仿真花束',
+                        proPrice:'108.00'
                     },
                 ]
             }

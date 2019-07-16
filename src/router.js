@@ -6,6 +6,7 @@ import Home from './views/website/Home'
 
 //商城
 import ShoppingHome from './views/shoppingMall/Home'
+import VaseDetail from './views/shoppingMall/detail/vase'
 
 Vue.use(Router)
 
@@ -20,11 +21,16 @@ export default new Router({
 
         //商城
         {
-            path:'/shppingMall/Home',
-            name:'ShoppingHome',
-            component:ShoppingHome
+            path: '/shoppingMall/Home',
+            name: 'ShoppingHome',
+            component: ShoppingHome,
 
-        }
-    ],
+        },
+        {
+            path: '/shoppingMall/detail/vase',
+            name: 'VaseDetail',
+            component:VaseDetail,
+        },
+    ]
 
 })
