@@ -175,7 +175,7 @@
 <script>
     import PageHeader from '../../components/website/Header'
     import PageFooter from '../../components/website/Footer'
-    // import BMap from 'BMap'
+    // import BMap from '../../BMap'
 
     export default {
         name: "Home",
