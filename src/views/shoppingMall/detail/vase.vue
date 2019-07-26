@@ -39,21 +39,36 @@
         <div class="container">
             <div class="type_list">
                 <el-row :gutter="20">
-                    <el-col :span="6">
-                        <div class="grid-content">1</div>
+                    <el-col :span="6" v-for="item in 12" :key="item.id">
+                        <div class="grid-content">
+                            <div class="vase_item">
+                                   <dl>
+                                       <router-link to="\">
+                                           <dt><img src="../../../assets/img/shoppingMall/detail/vase01.jpg" alt=""></dt>
+                                           <dd>【最家】创意现代简约白瓷干花花瓶摆件</dd>
+                                       </router-link>
+                                       <dd class="price">
+                                           <span>&yen;17.90</span>
+                                           <span class="button">
+                                               <el-button size="small" @click="showDetail">极速购买</el-button>
+                                           </span>
+                                       </dd>
+                                   </dl>
+                            </div>
+                        </div>
                     </el-col>
-                    <el-col :span="6"><div class="grid-content">1</div></el-col>
-                    <el-col :span="6"><div class="grid-content">1</div></el-col>
-                    <el-col :span="6"><div class="grid-content">1</div></el-col>
                 </el-row>
             </div>
         </div>
-
+       <fast-detail ref="FastDetail"></fast-detail>
     </div>
 </template>
 
 <script>
+    import FastDetail from "./fastDetailModal";
+
     export default {
+        components: {FastDetail},
         data() {
             return {
                 options: [{
@@ -73,6 +88,14 @@
                     label: '价格从高到低'
                 }],
                 value: ''
+            }
+        },
+        mounted() {
+        },
+        methods: {
+        //快速浏览
+            showDetail(){
+                this.$refs.FastDetail.show();
             }
         }
     }
