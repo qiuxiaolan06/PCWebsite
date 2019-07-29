@@ -60,15 +60,17 @@
                 </el-row>
             </div>
         </div>
-       <fast-detail ref="FastDetail"></fast-detail>
+        <fast-detail ref="FastDetail"></fast-detail>
+        <vase-footer></vase-footer>
     </div>
 </template>
 
 <script>
     import FastDetail from "./fastDetailModal";
+    import VaseFooter from '../../../components/shoppingMall/Footer'
 
     export default {
-        components: {FastDetail},
+        components: {FastDetail,VaseFooter},
         data() {
             return {
                 options: [{

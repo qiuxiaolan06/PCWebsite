@@ -28,7 +28,9 @@
                         <p> <el-input-number v-model="num" @change="handleChange"  :min="1" :max="5"  size="mini" label="描述文字"></el-input-number></p>
                     </div>
 
-                    <div class="more_detail">查看更多细节</div>
+                    <div class="more_detail">
+                        <router-link to="/shoppingMall/detail/detail">查看更多细节</router-link>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,6 +135,7 @@
                 }
 
                 .tro_list{
+                    margin-top: 10px;
                     span{
                         width: 45px;
                         height: 45px;
@@ -201,7 +204,11 @@
                     height: 45px;
                     line-height: 45px;
                     cursor: pointer;
-                    text-decoration: underline;
+
+                    a{
+                        padding: 30px 20px;
+                        color: #606266;
+                    }
                 }
             }
         }

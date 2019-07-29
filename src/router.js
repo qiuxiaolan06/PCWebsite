@@ -7,6 +7,7 @@ import Home from './views/website/Home'
 //商城
 import ShoppingHome from './views/shoppingMall/Home'
 import VaseDetail from './views/shoppingMall/detail/vase'
+import Detail from './views/shoppingMall/detail/detail'
 
 Vue.use(Router)
 
@@ -31,6 +32,11 @@ export default new Router({
             name: 'VaseDetail',
             component:VaseDetail,
         },
+        {
+            path: '/shoppingMall/detail/detail',
+            name: 'Detail',
+            component:Detail,
+        }
     ]
 
 })
