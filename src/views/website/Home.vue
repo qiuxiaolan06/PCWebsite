@@ -162,9 +162,9 @@
                     <div class="wire">
                         <img src="../../assets/img/imgs/tianxian4.png" alt="">
                     </div>
-                    <div class="map_box">
-                        <div id="all-map" class="all-map" style="width:590px;height: 330px"></div>
-                    </div>
+                    <!--<div class="map_box">-->
+                        <!--<div id="all-map" class="all-map" style="width:590px;height: 330px"></div>-->
+                    <!--</div>-->
                 </div>
             </div>
         </div>
@@ -192,7 +192,7 @@
             }
         },
         mounted() {
-            this.BaiduMap();
+            // this.BaiduMap();
             //根据窗口宽度设置轮播图高度
             this.resizeCarouselHeight();
             window.onresize = (() => {
@@ -222,23 +222,23 @@
                 }
             },
 
-            //百度地图
-            BaiduMap() {
-                /**地图初始化 start */
-                var map = new BMap.Map("all-map")// 创建Map实例
-                map.centerAndZoom(new BMap.Point(120.913772,32.030526), 11)// 初始化地图,设置中心点坐标和地图级别
-                // 添加地图类型控件
-                map.addControl(new BMap.MapTypeControl({
-                    mapTypes: [
-                        BMAP_NORMAL_MAP,
-                        BMAP_HYBRID_MAP
-                    ]
-                }));
-                let marker = new BMap.Marker(120.913772,32.030526);        // 创建标注
-                this.map.addOverlay(marker);
-                map.setCurrentCity("南通")// 设置地图显示的城市 此项是必须设置的
-                map.enableScrollWheelZoom(true)//开启鼠标滚轮缩放
-            }
+            // //百度地图
+            // BaiduMap() {
+            //     /**地图初始化 start */
+            //     var map = new BMap.Map("all-map")// 创建Map实例
+            //     map.centerAndZoom(new BMap.Point(120.913772,32.030526), 11)// 初始化地图,设置中心点坐标和地图级别
+            //     // 添加地图类型控件
+            //     map.addControl(new BMap.MapTypeControl({
+            //         mapTypes: [
+            //             BMAP_NORMAL_MAP,
+            //             BMAP_HYBRID_MAP
+            //         ]
+            //     }));
+            //     let marker = new BMap.Marker(120.913772,32.030526);        // 创建标注
+            //     this.map.addOverlay(marker);
+            //     map.setCurrentCity("南通")// 设置地图显示的城市 此项是必须设置的
+            //     map.enableScrollWheelZoom(true)//开启鼠标滚轮缩放
+            // }
         }
     }
 </script>
