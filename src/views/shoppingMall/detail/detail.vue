@@ -11,13 +11,20 @@
                 </el-breadcrumb>
             </div>
         </div>
-
         <div class="container">
+            <!--大图 及 商品介绍-->
             <div class="proDet">
                 <div class="pro_big">
                     <img :src="bigImg" alt="">
+                    <div class="tro_list">
+                            <span v-for="item in smallImg" :key="item.id" >
+                                <a href="#" :title="item.title">
+                                    <img :src="item.url" @mouseenter="getIndex(item.url)">
+                                </a>
+                            </span>
+                    </div>
+                    <div style="clear: both"></div>
                 </div>
-
                 <div class="intro">
                     <div class="intro_title">
                         <h3>【最家】非洲菊仿真花干花</h3>
@@ -42,6 +49,57 @@
                         <span style="padding-right:30px;"><el-button>加入购物车</el-button></span>
                         <span style="padding-left: 30px;"><el-button type="danger">立即购买</el-button></span>
                     </div>
+
+                </div>
+            </div>
+
+            <div class="pro_information">
+                <div class="comment">
+                    <div class="tab">
+                        <el-tabs v-model="activeName">
+                            <el-tab-pane label="商品详情" name="first">
+                                <div class="pro_img" v-for="item in 3" :key="item.id">
+                                    <img src="../../../assets/img/shoppingMall/detail/det07.jpg" alt="">
+                                </div>
+                            </el-tab-pane>
+                            <el-tab-pane label="相关评论" name="second">
+                                <div class="per" v-for="item in 4" :key="item.id">
+                                    <div class="per_img">
+                                        <img src="../../../assets/img/shoppingMall/detail/per01.jpg" alt="">
+                                    </div>
+
+                                    <div class="perR">
+                                        <p class="perR_name">馨***呀</p>
+                                        <p class="perR_comment">不好意思评价晚了，产品很好，价格比玻璃品便宜，没有我担心的杂色，发货快，包装好，全5分!不好意思评价晚了，产品很好，价格比玻璃品便宜，没有我担心的杂色，发货快，包装好，全5分</p>
+                                        <p class="perR_img">
+                                            <span v-for="item in 5" :key="item.id">
+                                                <img src="../../../assets/img/shoppingMall/detail/eva01.jpg" alt="">
+                                            </span>
+                                        </p>
+                                        <p class="perR_date">
+                                            2016年12月27日08:31
+                                            <span>颜色分类：大中小三件套（不含花）</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </el-tab-pane>
+                        </el-tabs>
+                    </div>
+                </div>
+                <div class="recommended">
+                    <p class="recommended_title">
+                        为你推荐
+                    </p>
+                    <div class="recommended_list">
+                        <div class="recommended_item" v-for="i in 5" :key="i.id">
+                            <div class="item_img">
+                                <img src="../../../assets/img/shoppingMall/detail/see01.jpg" alt="">
+                            </div>
+                            <p>【最家】复古文艺风玻璃花瓶</p>
+                            <p class="item_price">&yen;193.20</p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,6 +113,7 @@
             return{
                 bigImg:require('../../../assets/img/shoppingMall/detail/proBig02.jpg'),
                 num: 1,
+                activeName:'first',
                 smallImg:[
                     {
                         index:1,

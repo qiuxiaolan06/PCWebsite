@@ -36,7 +36,7 @@
         </div>
         <span slot="footer" class="dialog-footer" >
             <el-button >立即购买</el-button>
-            <el-button type="primary">加购物车</el-button>
+            <el-button type="danger">加购物车</el-button>
         </span>
     </el-dialog>
 </template>

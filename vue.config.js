@@ -1,6 +1,11 @@
 module.exports = {
-    baseUrl:'./',
-    devServer:{
-        proxy:'http://127.0.0.1:3000'
-    }
+    // 基本路径
+    baseUrl: './',
+    // 输出文件目录
+    outputDir: 'dist',
+    // webpack-dev-server 相关配置
+    devServer: {
+        port: 8888,
+    },
+
 }
