@@ -39,8 +39,10 @@
 
   .grid-content {
     border: 1px solid transparent;
+    margin-bottom: 25px;
 
     .vase_item {
+
       dl {
         a {
           color: #2c3e50;
@@ -76,6 +78,7 @@
   }
 
   .grid-content:hover {
-    border: 1px solid #000;
+    border: 1px solid #C10000;
+    border-radius: 3px;
   }
 }

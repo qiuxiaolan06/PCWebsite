@@ -43,14 +43,14 @@
                         <div class="grid-content">
                             <div class="vase_item">
                                    <dl>
-                                       <router-link to="\">
+                                       <router-link to="/shoppingMall/detail/detail">
                                            <dt><img src="../../../assets/img/shoppingMall/detail/vase01.jpg" alt=""></dt>
                                            <dd>【最家】创意现代简约白瓷干花花瓶摆件</dd>
                                        </router-link>
                                        <dd class="price">
                                            <span>&yen;17.90</span>
                                            <span class="button">
-                                               <el-button size="small" @click="showDetail">极速购买</el-button>
+                                               <el-button size="small" type="danger" @click="showDetail">极速购买</el-button>
                                            </span>
                                        </dd>
                                    </dl>
