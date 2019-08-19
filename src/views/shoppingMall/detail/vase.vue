@@ -61,16 +61,14 @@
             </div>
         </div>
         <fast-detail ref="FastDetail"></fast-detail>
-        <vase-footer></vase-footer>
     </div>
 </template>
 
 <script>
     import FastDetail from "./fastDetailModal";
-    import VaseFooter from '../../../components/shoppingMall/Footer'
 
     export default {
-        components: {FastDetail,VaseFooter},
+        components: {FastDetail},
         data() {
             return {
                 options: [{

@@ -1,9 +1,11 @@
+@import "../base";
 .container {
   width: 1200px;
   margin: 0 auto;
 }
 
 .top_banner {
+  padding-top: 61px;
   width: 100%;
 
   img {

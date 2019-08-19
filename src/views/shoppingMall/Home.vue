@@ -1,7 +1,5 @@
 <template>
     <div>
-        <!--头部-->
-        <Header></Header>
         <!--轮播部分-->
         <div class="swipe" style="margin-top:62px;">
             <el-carousel :height="carouselHeight" arrow="always">
@@ -155,16 +153,12 @@
                 </el-row>
             </div>
         </div>
-        <Footer></Footer>
     </div>
 </template>
 
 <script>
-    import Header from '../../components/shoppingMall/Header';
-    import Footer from '../../components/shoppingMall/Footer';
     export default {
         name: "Home",
-        components: {Footer,Header},
         data() {
             return {
                 carouselHeight: '500px',//轮播图高度

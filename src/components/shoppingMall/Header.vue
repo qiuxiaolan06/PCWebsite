@@ -6,9 +6,11 @@
                     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
                         <el-menu-item index="1">首页</el-menu-item>
                         <el-menu-item index="2">
-                            <router-link to="/shoppingMall/detail/vase">所有商品</router-link>
+                            <router-link to="#">所有商品</router-link>
                         </el-menu-item>
-                        <el-menu-item index="3">装饰摆件</el-menu-item>
+                        <el-menu-item index="3">
+                            <router-link to="/shoppingMall/detail/vase">装饰摆件</router-link>
+                        </el-menu-item>
                         <el-menu-item index="4">布艺软饰</el-menu-item>
                         <el-menu-item index="5">墙式挂壁</el-menu-item>
                         <el-menu-item index="6">蜡艺香薰</el-menu-item>
@@ -25,7 +27,7 @@
                    </div>
 
                     <div class="shopping_cart">
-                        <div class="mine">
+                        <div class="mine" @click="goUserCenter">
                             <el-avatar :size="'small'" :src="'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png'"></el-avatar>
                         </div>
                         <div class="cart">
@@ -50,8 +52,15 @@
                 hotsearch: '',
             };
         },
+        mounted(){
+
+        },
         methods: {
-        }
+            goUserCenter(){
+                this.$router.push('/shoppingMall/user/usercenter');
+            }
+        },
+
     }
 </script>
 
