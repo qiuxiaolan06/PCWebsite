@@ -106,7 +106,29 @@
                             </div>
                         </div>
                     </div>
-                    <div v-show="cur==4">地址管理</div>
+                    <div v-show="cur==4" class="address">
+                        <div class="address_header">
+                            <h2>收货地址</h2>
+                        </div>
+                        <div class="address_choose">
+                            <el-row :gutter="20">
+                                <el-col :span="6">
+                                    <div class="grid-content bg-purple" style="text-align: center">
+                                        <i class="el-icon-circle-plus-outline" style="padding-top: 10px"></i>
+                                        <p class="add_address">添加联系方式</p>
+                                    </div>
+                                </el-col>
+                                <el-col :span="6" v-for="item in 3" :key="item.id">
+                                    <div class="grid-content bg-purple">
+                                        <p>大橙子</p>
+                                        <p><i class="el-icon-mobile-phone"></i>178*****102</p>
+                                        <p class="address_info"><i class="el-icon-location-outline"></i>江苏省南京市江宁区双龙大道科技园89号3号楼302室内</p>
+                                        <p class="address_button"><span>修改</span><span>删除</span></p>
+                                    </div>
+                                </el-col>
+                            </el-row>
+                        </div>
+                    </div>
                     <div v-show="cur==5">个人信息</div>
                     <div v-show="cur==6">修改密码</div>
                 </div>
@@ -129,6 +151,83 @@
     }
 </script>
 
+
 <style lang="scss" scoped>
+    .el-row {
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .el-col {
+        border-radius: 4px;
+    }
+
+    .bg-purple {
+        background: #fff;
+        box-shadow: rgba(0, 0, 0, 0.15) 0 0 12px;
+    }
+
+    .grid-content {
+        padding: 10px;
+        border-radius: 4px;
+        height:130px;
+        transform: translate3d(0, 0, 0);
+        //box-shadow: rgba(0, 0, 0, 0.18) 0 1px 10px 0;
+        //border-radius: 50%;
+        transition-property: box-shadow, transform;
+        transition-duration: 800ms;
+        transition-timing-function: cubic-bezier(.16, 1, .29, .99);
+
+        .add_address{
+            font-weight: bold;
+        }
+        .address_info{
+            line-height: 18px;
+            padding: 5px 0;
+        }
+
+        .address_button{
+            span{
+                display: inline-block;
+                width: 50%;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            span:hover{
+                color: #a10000;
+            }
+        }
+
+        i{
+            display: inline-block;
+            font-size: 55px;
+            color:#e5edf4;
+            font-weight: bold;
+        }
+        p{
+            font-size: 13px;
+            line-height: 24px;
+            color: #757575;
+            i{
+                font-size: 14px;
+                color: #757575;
+                padding-right: 5px;
+            }
+        }
+    }
+
+    .grid-content:hover{
+        transform: translate3d(0px, -4px, 0px);
+        box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.5);
+        transition-property: box-shadow, transform;
+        transition-duration: 800ms;
+        transition-timing-function: cubic-bezier(.16, 1, .29, .99);
+    }
+    .row-bg {
+        padding: 10px 0;
+        background-color: #f9fafc;
+    }
 @import "../../../assets/css/shoppingMall/usercenter";
 </style>

@@ -139,6 +139,7 @@
             margin-top: 20px;
             height: 130px;
             display: flex;
+
             .box_bg{
               width: 100px;
               height: 100px;
@@ -189,6 +190,21 @@
               background: rgb(255,153,0);
             }
           }
+        }
+      }
+
+      .address{
+        .address_header{
+          width: 90%;
+          margin: 0 auto;
+          padding: 20px 0;
+          border-bottom: 1px solid #e4e4e4;
+        }
+
+        .address_choose{
+          width: 90%;
+          margin: 20px auto;
+          padding: 20px  0;
         }
       }
     }
