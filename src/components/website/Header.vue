@@ -52,6 +52,6 @@
 </script>
 
 <style lang="scss" scoped>
-    @import "../../assets/css/base";
+    /*@import "../../assets/css/base";*/
     @import "../../assets/css/page";
 </style>

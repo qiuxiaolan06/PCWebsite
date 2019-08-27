@@ -113,7 +113,7 @@
                         <div class="address_choose">
                             <el-row :gutter="20">
                                 <el-col :span="6">
-                                    <div class="grid-content bg-purple" style="text-align: center">
+                                    <div class="grid-content bg-purple" style="text-align: center" @click="addressShow">
                                         <i class="el-icon-circle-plus-outline" style="padding-top: 10px"></i>
                                         <p class="add_address">添加联系方式</p>
                                     </div>
@@ -135,17 +135,27 @@
             </div>
 
         </div>
+        <!--添加地址-->
+        <add ref="Add"></add>
     </div>
 
 </template>
 
 <script>
+    import Add from "./addressModal"
     export default {
         name: "usercenter",
+        components: {Add},
         data(){
             return {
                 tabPosition: 'left',
                 cur: 3 //默认选中我的中心
+            }
+        },
+        mounted() {},
+        methods:{
+            addressShow(){
+                this.$refs.Add.show();
             }
         }
     }
@@ -153,81 +163,5 @@
 
 
 <style lang="scss" scoped>
-    .el-row {
-        margin-bottom: 20px;
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-    .el-col {
-        border-radius: 4px;
-    }
-
-    .bg-purple {
-        background: #fff;
-        box-shadow: rgba(0, 0, 0, 0.15) 0 0 12px;
-    }
-
-    .grid-content {
-        padding: 10px;
-        border-radius: 4px;
-        height:130px;
-        transform: translate3d(0, 0, 0);
-        //box-shadow: rgba(0, 0, 0, 0.18) 0 1px 10px 0;
-        //border-radius: 50%;
-        transition-property: box-shadow, transform;
-        transition-duration: 800ms;
-        transition-timing-function: cubic-bezier(.16, 1, .29, .99);
-
-        .add_address{
-            font-weight: bold;
-        }
-        .address_info{
-            line-height: 18px;
-            padding: 5px 0;
-        }
-
-        .address_button{
-            span{
-                display: inline-block;
-                width: 50%;
-                text-align: center;
-                cursor: pointer;
-            }
-
-            span:hover{
-                color: #a10000;
-            }
-        }
-
-        i{
-            display: inline-block;
-            font-size: 55px;
-            color:#e5edf4;
-            font-weight: bold;
-        }
-        p{
-            font-size: 13px;
-            line-height: 24px;
-            color: #757575;
-            i{
-                font-size: 14px;
-                color: #757575;
-                padding-right: 5px;
-            }
-        }
-    }
-
-    .grid-content:hover{
-        transform: translate3d(0px, -4px, 0px);
-        box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.5);
-        transition-property: box-shadow, transform;
-        transition-duration: 800ms;
-        transition-timing-function: cubic-bezier(.16, 1, .29, .99);
-    }
-    .row-bg {
-        padding: 10px 0;
-        background-color: #f9fafc;
-    }
 @import "../../../assets/css/shoppingMall/usercenter";
 </style>
