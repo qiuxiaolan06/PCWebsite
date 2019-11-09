@@ -1,4 +1,4 @@
-//@import "../base";
+@import "../base";
 
 .usercenter{
   background: #f5f5f5;
@@ -248,7 +248,7 @@
       span{
         display: inline-block;
         width: 50%;
-        text-align: center;
+        text-align: left;
         cursor: pointer;
       }
 

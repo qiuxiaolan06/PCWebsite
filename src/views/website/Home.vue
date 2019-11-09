@@ -1,6 +1,6 @@
 <template>
     <div>
-        <page-header></page-header>
+        <!--<page-header></page-header>-->
 
         <!--轮播部分-->
         <div class="swipe">
@@ -168,18 +168,18 @@
                 </div>
             </div>
         </div>
-        <page-footer></page-footer>
+        <!--<page-footer></page-footer>-->
   </div>
 </template>
 
 <script>
-    import PageHeader from '../../components/website/Header'
-    import PageFooter from '../../components/website/Footer'
+    // import PageHeader from '../../components/website/Header'
+    // import PageFooter from '../../components/website/Footer'
     // import BMap from '../../BMap'
 
     export default {
         name: "Home",
-        components: {PageHeader,PageFooter},
+        // components: {PageHeader,PageFooter},
         data() {
             return {
                 carouselHeight: '500px',//轮播图高度

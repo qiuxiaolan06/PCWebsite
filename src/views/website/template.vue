@@ -10,7 +10,6 @@
     import  websiteHeader from "../../components/website/Header";
     import  websiteFooter from "../../components/website/Footer"
     export default {
-        name: "template",
         components:{websiteHeader,websiteFooter},
     }
 </script>

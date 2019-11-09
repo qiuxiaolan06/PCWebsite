@@ -12,15 +12,15 @@
                            <i></i>
                        </span>
                        <span>
-                           <router-link to="/">玩转通宝</router-link>
+                           <router-link to="/website/money/detail">玩转通宝</router-link>
                            <i></i>
                        </span>
                        <span>
-                           <router-link to="/">商家入驻</router-link>
+                           <router-link to="/website/tenants/detail">商家入驻</router-link>
                            <i></i>
                        </span>
                        <span>
-                           <router-link to="/">关于我们</router-link>
+                           <router-link to="/website/about/detail">关于我们</router-link>
                            <i></i>
                        </span>
                    </div>

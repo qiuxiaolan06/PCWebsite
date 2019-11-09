@@ -24,9 +24,23 @@ export default new Router({
                     name: 'websiteHome',
                     component: () => import("./views/website/Home")
                 },
+                {
+                    path: '/website/about/detail',
+                    name: 'websiteAbout',
+                    component: () => import("./views/website/about/detail")
+                },
+                {
+                    path: '/website/money/detail',
+                    name: 'websiteMoney',
+                    component: () => import("./views/website/money/detail")
+                },
+                {
+                    path: '/website/tenants/detail',
+                    name: 'websiteTenants',
+                    component: () => import("./views/website/tenants/detail")
+                },
             ]
         },
-
         //商城
         {
             path: '/shoppingMall',
